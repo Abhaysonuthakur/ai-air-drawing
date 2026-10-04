@@ -1,0 +1,22 @@
+# AI Air Drawing - runtime dependencies
+#
+# Verified working on Windows + Python 3.11 with a standard laptop webcam.
+#
+# IMPORTANT: mediapipe ships prebuilt wheels for Python 3.9 - 3.12 only.
+# On Python 3.13 the install will fail. Use 3.11 or 3.12.
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows)
+#   pip install -r requirements.txt
+
+# --- core ---
+numpy==1.26.4
+opencv-contrib-python==4.11.0.86
+mediapipe==0.10.14
+
+# --- imported by mediapipe at startup, pinned for reproducible installs ---
+protobuf==4.25.9
+matplotlib==3.8.4
+absl-py
+attrs
+flatbuffers
